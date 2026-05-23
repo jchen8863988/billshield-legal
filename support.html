@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Technical support and help for HookFlow — Apple App Store." />
+    <title>Support — HookFlow</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --text: #0b1220;
+        --muted: #3b4a63;
+        --bg: #ffffff;
+        --card: #f6f8fc;
+        --border: rgba(15, 23, 42, 0.12);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --text: #eef2ff;
+          --muted: #b8c0d6;
+          --bg: #0b1020;
+          --card: #121a33;
+          --border: rgba(238, 242, 255, 0.12);
+        }
+      }
+      body {
+        margin: 0;
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          Roboto,
+          Helvetica,
+          Arial,
+          'Apple Color Emoji',
+          'Segoe UI Emoji';
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.55;
+      }
+      main {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 28px 18px 60px;
+      }
+      h1 {
+        font-size: 28px;
+        margin: 0 0 8px;
+        letter-spacing: -0.02em;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
+        margin: 0 0 22px;
+      }
+      h2 {
+        font-size: 18px;
+        margin: 26px 0 10px;
+      }
+      h3 {
+        font-size: 15px;
+        margin: 18px 0 8px;
+        font-weight: 600;
+      }
+      p,
+      li {
+        font-size: 15px;
+        color: var(--text);
+      }
+      ul {
+        padding-left: 18px;
+      }
+      .callout {
+        border: 1px solid var(--border);
+        background: var(--card);
+        border-radius: 14px;
+        padding: 14px 14px;
+        margin: 14px 0;
+      }
+      code {
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          'Liberation Mono',
+          'Courier New',
+          monospace;
+        font-size: 13px;
+        word-break: break-all;
+      }
+      a {
+        color: inherit;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      footer {
+        margin-top: 34px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>HookFlow — Support</h1>
+      <p class="meta">
+        <strong>App:</strong> HookFlow<br />
+        <strong>Bundle ID:</strong> <code>com.jchen.HookFlow</code><br />
+        <strong>Last updated:</strong> May 6, 2026
+      </p>
+
+      <div class="callout">
+        <p style="margin: 0">
+          This page provides official technical support information for HookFlow on iPhone and iPad. Legal documents are hosted in a separate repository. For privacy questions, see our
+          <a href="https://jchen8863988.github.io/HookFlow/privacy-policy.html">Privacy Policy</a>. For terms of use, see our
+          <a href="https://jchen8863988.github.io/HookFlow/eula.html">Terms of Use (EULA)</a>.
+        </p>
+      </div>
+
+      <h2>1) Contact us</h2>
+      <p>
+        <strong>Email (support &amp; technical):</strong>
+        <a href="mailto:jianchen8863988@gmail.com?subject=HookFlow%20Support">jianchen8863988@gmail.com</a>
+      </p>
+      <p>
+        Please include your <strong>device model</strong> (e.g. iPhone 15), <strong>iOS version</strong>, HookFlow <strong>app version</strong> (Settings or App Store), and a short description of the issue. For connection problems, mention whether you use a <strong>physical device vs. Simulator</strong> and your approximate <strong>backend URL format</strong> (e.g. local IP vs. HTTPS domain) without sharing secret tokens or API keys.
+      </p>
+
+      <h2>2) What HookFlow is</h2>
+      <p>
+        HookFlow helps you plan and export short-form marketing-style video content using templates, previews, and on-device workflows. Optional features can use a <strong>backend server you configure</strong> and, when enabled on that server, AI providers (such as OpenAI-compatible APIs or Google Gemini) or <strong>public</strong> data sources for insights-style features.
+      </p>
+
+      <h2>3) Requirements</h2>
+      <ul>
+        <li><strong>iPhone / iPad</strong> running a supported iOS/iPadOS version listed on the App Store.</li>
+        <li><strong>Network:</strong> optional cloud features require internet access to reach your configured backend and third-party services.</li>
+        <li><strong>Photos (optional):</strong> used only when you choose to pick media or save exports; grant access in Settings → HookFlow if prompts were declined earlier.</li>
+      </ul>
+
+      <h2>4) Backend URL &amp; connectivity</h2>
+      <p>
+        In the App, open <strong>Settings → Backend &amp; AI</strong> (or equivalent environment screen) and set:
+      </p>
+      <ul>
+        <li>
+          <strong>Simulator / same Mac:</strong> often <code>http://127.0.0.1:8787</code> or your machine’s LAN IP with port <code>8787</code>, if your server listens there.
+        </li>
+        <li>
+          <strong>Physical iPhone on the same Wi‑Fi:</strong> use your computer’s <strong>LAN IP address</strong> (not <code>localhost</code>), e.g. <code>http://192.168.x.x:8787</code>. Ensure the phone can reach that host (firewall/VPN/proxy).
+        </li>
+        <li>
+          <strong>Production:</strong> use an <strong>HTTPS</strong> URL with a valid certificate where possible.
+        </li>
+      </ul>
+      <p>
+        If requests fail: confirm the server is running, the port matches, and iOS can reach the host (try Safari on the device to open the server’s health/status URL if exposed). Avoid pasting secrets into email; rotate tokens if exposed.
+      </p>
+
+      <h2>5) AI &amp; cloud generation</h2>
+      <p>
+        Script generation and similar cloud jobs depend on <strong>your backend</strong> and how it is configured (API keys, models, quotas). The App shows job status and messages when available.
+      </p>
+      <ul>
+        <li>If you see errors about AI not being configured, the server must have valid provider credentials and a healthy <code>/status</code> (or equivalent) response.</li>
+        <li>Rate limits (HTTP 429) or outages (503) may require waiting or retrying; check provider dashboards.</li>
+        <li>
+          In-app consent: optional <strong>personalization</strong> may be required for certain cloud/AI flows—review choices on the privacy/consent screens and Settings.
+        </li>
+      </ul>
+
+      <h2>6) Public insights &amp; optional sources</h2>
+      <p>
+        Features that rely on “public insights” send configuration to your backend when enabled. If a source is disabled or not configured on the server (for example missing credentials for a third-party API), results may be empty or jobs may fail—check backend logs and toggles.
+      </p>
+
+      <h2>7) Jobs: errors and messages</h2>
+      <p>
+        Open the <strong>Jobs</strong> screen to view status, phase, and error text. Messages often originate from the network or upstream API. Typical steps:
+      </p>
+      <ul>
+        <li>Verify network and backend reachability.</li>
+        <li>Confirm authentication token (if required) is still valid.</li>
+        <li>Retry after a few minutes if the service was rate-limited or temporarily unavailable.</li>
+      </ul>
+
+      <h2>8) Export &amp; performance</h2>
+      <p>
+        Video export can be CPU-intensive. If export is slow or fails: close other heavy apps, free storage, lower device load, and retry. On iPad, allow the process to finish before leaving the App. If you use dialogue text on export, very long scripts may affect layout or duration—adjust content and try again.
+      </p>
+
+      <h2>9) Privacy, language, and reset</h2>
+      <ul>
+        <li>Language can be changed in Settings; the App stores your preference on-device.</li>
+        <li>
+          Optional <strong>on-device analytics</strong> and <strong>personalization</strong> can be reviewed under <strong>Settings → Privacy &amp; data</strong>. Use <strong>Reset privacy &amp; data choices</strong> there if you want to clear saved consent and choose again on next launch.
+        </li>
+        <li>For a full local reset of some data, you may uninstall the App (subject to iOS behavior) or use in-app controls where provided.</li>
+      </ul>
+
+      <h2>10) Response times</h2>
+      <p>
+        We aim to respond to support email as soon as practical. Automated receipt is not guaranteed; if you do not hear back within several business days, verify the address and retry with the details in section 1.
+      </p>
+
+      <footer>
+        <p>
+          © 2026 Jian Chen. Apple, App Store, iPhone, iPad, and related marks are trademarks of Apple Inc.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
