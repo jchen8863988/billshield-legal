@@ -46,14 +46,13 @@
 <body>
 
 <h1>BillShield Support</h1>
-<p class="meta"><strong>Last updated:</strong> May 22, 2026<br />
-<strong>Effective date:</strong> May 22, 2026<br />
+<p class="meta"><strong>Last updated:</strong> May 24, 2026<br />
+<strong>Effective date:</strong> May 24, 2026<br />
 <strong>App:</strong> BillShield — Medical Bill Auditor<br />
-<strong>Bundle ID:</strong> com.jchen.BillShield<br />
 <strong>Support email:</strong> <a href="mailto:hello@familymedvault.com">hello@familymedvault.com</a><br />
 <strong>Legal:</strong> <a href="privacy-policy.html">Privacy Policy</a> · <a href="eula.html">Terms of Use (EULA)</a></p>
 
-<p>Welcome to BillShield support. This page explains how to get help, answers common questions, and describes what you can expect from us as an <strong>individual developer</strong>. BillShield is an educational tool to help U.S. consumers understand medical bills and insurance Explanation of Benefits (EOBs). It is <strong>not</strong> medical, legal, insurance, or financial advice.</p>
+<p>Welcome to BillShield support. This page explains how to get help, answers common questions, and describes what you can expect from us as an <strong>individual developer</strong>. BillShield is a <strong>local-first</strong> educational tool to help U.S. consumers understand medical bills and insurance Explanation of Benefits (EOBs). It is <strong>not</strong> medical, legal, insurance, or financial advice.</p>
 
 <div class="box">
   <p><strong>Need help?</strong> Email <a href="mailto:hello@familymedvault.com">hello@familymedvault.com</a></p>
@@ -64,6 +63,7 @@
     <li>Your iOS version (Settings → General → About)</li>
     <li>BillShield app version (Settings → scroll to bottom)</li>
     <li>Device model (e.g., iPhone 15, iPad Pro)</li>
+    <li>Whether you are signed in with Apple and your plan (Free, Pro, Appeal Pack)</li>
     <li>Screenshots if helpful (redact member IDs, account numbers, and other sensitive details)</li>
   </ul>
   <p><strong>Privacy tip:</strong> Do <strong>not</strong> email full medical bills or EOBs unless absolutely necessary. If you must share document text, redact member IDs, dates of birth, and account numbers whenever possible.</p>
@@ -75,7 +75,7 @@
   <li><strong>Support is provided by the Developer</strong> (contact above), <strong>not</strong> by Apple Inc.</li>
   <li>Apple has <strong>no obligation</strong> to provide maintenance or support services for BillShield.</li>
   <li>For <strong>subscription billing, refunds, or payment disputes</strong>, contact <strong>Apple Support</strong> or manage your subscription in <strong>Settings → Apple ID → Subscriptions</strong> on your device.</li>
-  <li>For App Store purchase refunds, follow Apple’s refund process; the Developer cannot issue App Store refunds directly.</li>
+  <li>For App Store purchase refunds (including consumable Appeal Pack purchases), follow Apple’s refund process at <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a>; the Developer cannot issue App Store refunds directly.</li>
   <li>Product questions, bug reports, and feature feedback should be sent to <a href="mailto:hello@familymedvault.com">hello@familymedvault.com</a>.</li>
 </ul>
 
@@ -83,23 +83,39 @@
 <ol>
   <li><strong>Scan or import</strong> a medical bill or EOB using the camera or a PDF.</li>
   <li><strong>Review results</strong> on-device: flagged charges, denial-code explanations, and potential savings estimates.</li>
+  <li><strong>Save as an Active Case</strong> to track a billing dispute or appeal (subject to your plan limit).</li>
   <li><strong>Track deadlines</strong> for internal appeals, external review, and state insurance complaints.</li>
   <li><strong>Generate appeal letters</strong> and export PDFs when ready.</li>
-  <li><strong>Optional:</strong> Sign in with Apple to save history across devices; enable Cloud AI only if you want cloud-assisted analysis (off by default).</li>
+  <li><strong>Optional:</strong> Sign in with Apple to save history and sync Active Cases; enable Cloud AI only if you want cloud-assisted analysis (off by default).</li>
 </ol>
-<p>Most core features work <strong>without signing in</strong>. Sign in with Apple is required for saving synced history, Cloud AI, and Restore Purchases.</p>
+<p>Many core features work <strong>without signing in</strong>. Sign in with Apple is required for saving synced history, Active Case sync, Cloud AI, subscription linking, and Restore Purchases.</p>
 
-<h2>3. Frequently Asked Questions</h2>
+<h2>3. Plans at a Glance</h2>
+<p>Your plan controls <strong>Active Cases</strong> (open billing disputes you can track) and <strong>Cloud AI usage</strong> (server-side limits when Cloud AI is enabled). Exact limits are enforced in the App and may change; see our <a href="eula.html">EULA</a> and <a href="privacy-policy.html">Privacy Policy</a>.</p>
+<table>
+  <thead>
+    <tr><th>Plan</th><th>Active Cases (typical)</th><th>Cloud usage (typical / month)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Free</td><td>1</td><td>Fair-use limited</td></tr>
+    <tr><td>BillShield Pro (monthly)</td><td>10</td><td>Expanded</td></tr>
+    <tr><td>BillShield Pro (annual)</td><td>25</td><td>Expanded</td></tr>
+    <tr><td>One-time Appeal Pack</td><td>—</td><td>May add premium appeal review + additional usage</td></tr>
+  </tbody>
+</table>
+<p><strong>Note:</strong> Unused Cloud AI allowances do <strong>not</strong> roll over to the next billing cycle unless we state otherwise in the App.</p>
 
-<h3>3.1 Account &amp; Sign in with Apple</h3>
+<h2>4. Frequently Asked Questions</h2>
+
+<h3>4.1 Account &amp; Sign in with Apple</h3>
 <table>
   <thead>
     <tr><th>Issue</th><th>What to try</th></tr>
   </thead>
   <tbody>
     <tr>
-      <td>I can’t save bills or appeals</td>
-      <td>Open <strong>Settings</strong> → tap <strong>Sign in with Apple</strong>. Saving and sync require an authenticated session.</td>
+      <td>I can’t save bills, cases, or appeals</td>
+      <td>Open <strong>Settings</strong> → tap <strong>Sign in with Apple</strong>. Saving, Active Cases, and sync require an authenticated session.</td>
     </tr>
     <tr>
       <td>Sign in fails or loops</td>
@@ -107,16 +123,41 @@
     </tr>
     <tr>
       <td>I switched devices</td>
-      <td>Sign in with the <strong>same Apple ID</strong> on the new device. Local-only data from your old device is not transferred unless you had signed in and synced before.</td>
+      <td>Sign in with the <strong>same Apple ID</strong> on the new device, then tap <strong>Restore Purchases</strong>. Local-only data from your old device is not transferred unless you had signed in and synced before.</td>
     </tr>
     <tr>
       <td>How do I sign out?</td>
       <td><strong>Settings</strong> → Sign out. Signing out disables Cloud AI and may limit synced features until you sign in again.</td>
     </tr>
+    <tr>
+      <td>Delete my cloud account</td>
+      <td>First use <strong>Settings → Privacy → Delete all data</strong> for on-device data. To request deletion of cloud account data (profiles, cases, usage logs), email <a href="mailto:hello@familymedvault.com">hello@familymedvault.com</a> with subject <strong>BillShield Account Deletion</strong>. See our <a href="privacy-policy.html">Privacy Policy</a>.</td>
+    </tr>
   </tbody>
 </table>
 
-<h3>3.2 Cloud AI Assistance (Optional)</h3>
+<h3>4.2 Active Cases &amp; Plan Limits</h3>
+<table>
+  <thead>
+    <tr><th>Issue</th><th>What to try</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>“Active Case limit reached” / can’t save a new case</td>
+      <td>Your plan limits how many billing disputes you can track at once. Close, archive, or delete an existing Active Case, or upgrade to <strong>BillShield Pro</strong> in Settings. The Dashboard may show usage such as “1 / 1 used.”</td>
+    </tr>
+    <tr>
+      <td>Case count looks wrong after upgrade</td>
+      <td>Sign in with Apple → <strong>Restore Purchases</strong> → wait a minute and reopen the App. If still incorrect, email us with your Apple ID subscription status (from Settings → Apple ID → Subscriptions).</td>
+    </tr>
+    <tr>
+      <td>What is an Active Case?</td>
+      <td>An Active Case is a saved billing dispute or appeal you are working on (linked bills/EOBs, denial codes, status). It is separate from a one-time scan that you do not save.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>4.3 Cloud AI Assistance (Optional)</h3>
 <p>Cloud AI is <strong>disabled by default</strong>. When enabled, selected document text is sent through our secure backend (Supabase) to OpenAI for analysis. You never need to provide your own OpenAI API key.</p>
 <table>
   <thead>
@@ -125,15 +166,15 @@
   <tbody>
     <tr>
       <td>Cloud AI unavailable / “Not connected”</td>
-      <td>Sign in with Apple first → <strong>Settings</strong> → enable <strong>Cloud AI Assistance</strong>. Status should show <strong>Signed in · Cloud AI ready ✓</strong>.</td>
+      <td>Sign in with Apple first → <strong>Settings</strong> → enable <strong>Cloud AI Assistance</strong>. Status should show you are signed in and Cloud AI is ready.</td>
     </tr>
     <tr>
       <td>Cloud AI enabled but scan uses local analysis only</td>
       <td>When scanning, check <strong>Include this document in Cloud AI Review</strong> for that document. Cloud AI is per-document opt-in even when the global toggle is on.</td>
     </tr>
     <tr>
-      <td>“Monthly limit reached”</td>
-      <td>Cloud AI usage is subject to fair monthly quotas enforced on our servers. Limits reset each calendar month. BillShield Pro subscribers may have higher limits per our current plan terms.</td>
+      <td>“Usage limit reached” / insufficient credits</td>
+      <td>Cloud AI usage is subject to server-side limits tied to your plan. Allowances reset each <strong>billing cycle</strong> (not rolled over). BillShield Pro subscribers receive higher limits. You may see summarized usage in Settings.</td>
     </tr>
     <tr>
       <td>Cloud AI slow or times out</td>
@@ -146,7 +187,7 @@
   </tbody>
 </table>
 
-<h3>3.3 Subscriptions &amp; BillShield Pro</h3>
+<h3>4.4 Subscriptions, Pro &amp; Appeal Pack</h3>
 <table>
   <thead>
     <tr><th>Issue</th><th>What to try</th></tr>
@@ -165,13 +206,17 @@
       <td>Manage in <strong>Settings → Apple ID → Subscriptions</strong>. Cancellation takes effect at the end of the current billing period unless otherwise stated by Apple.</td>
     </tr>
     <tr>
+      <td>Appeal Pack not applied</td>
+      <td>Appeal Pack is a <strong>consumable</strong> one-time purchase. Sign in → complete purchase in Settings → tap <strong>Restore Purchases</strong> if benefits do not appear. Consumables are tied to your Apple ID and may be used when you run premium appeal features.</td>
+    </tr>
+    <tr>
       <td>Request a refund</td>
-      <td>Refunds for App Store purchases are handled by <strong>Apple</strong>, not the Developer. Visit <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a> or contact Apple Support.</td>
+      <td>Refunds for App Store purchases (subscriptions and consumables) are handled by <strong>Apple</strong>, not the Developer. Visit <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a> or contact Apple Support.</td>
     </tr>
   </tbody>
 </table>
 
-<h3>3.4 Scanning, OCR &amp; Analysis</h3>
+<h3>4.5 Scanning, OCR &amp; Analysis</h3>
 <table>
   <thead>
     <tr><th>Issue</th><th>What to try</th></tr>
@@ -191,12 +236,12 @@
     </tr>
     <tr>
       <td>App works offline</td>
-      <td>On-device OCR, denial decoding, timelines, and local appeal templates work without internet. Cloud AI and sync require connectivity.</td>
+      <td>On-device OCR, denial decoding, timelines, and local appeal templates work without internet. Cloud AI, sign-in sync, and subscription validation require connectivity.</td>
     </tr>
   </tbody>
 </table>
 
-<h3>3.5 Appeals, Letters &amp; Reminders</h3>
+<h3>4.6 Appeals, Letters &amp; Reminders</h3>
 <table>
   <thead>
     <tr><th>Issue</th><th>What to try</th></tr>
@@ -211,13 +256,17 @@
       <td>Ensure sufficient device storage; try again on Wi‑Fi; update iOS. If exporting to Files or Mail, confirm the destination app is available.</td>
     </tr>
     <tr>
+      <td>Premium appeal review</td>
+      <td>May be included with BillShield Pro or added via a one-time <strong>Appeal Pack</strong> purchase. When available, it uses Cloud AI for deeper appeal analysis. Results are drafts only—you must review and submit appeals yourself.</td>
+    </tr>
+    <tr>
       <td>Appeal letter content</td>
       <td>Letters are drafts for your review and editing. You are responsible for accuracy and submission to your insurer. The Developer does not file appeals on your behalf.</td>
     </tr>
   </tbody>
 </table>
 
-<h3>3.6 Privacy &amp; Data</h3>
+<h3>4.7 Privacy &amp; Data</h3>
 <table>
   <thead>
     <tr><th>Issue</th><th>What to try</th></tr>
@@ -225,7 +274,7 @@
   <tbody>
     <tr>
       <td>Delete all my data</td>
-      <td><strong>Settings → Privacy → Delete all data</strong>. This removes on-device SQLite data. Uninstalling the App also removes local data. Cloud-side account data handling is described in our <a href="privacy-policy.html">Privacy Policy</a>.</td>
+      <td><strong>Settings → Privacy → Delete all data</strong>. This removes on-device SQLite data. Uninstalling the App also removes local data. For cloud account deletion, email us (see Section 4.1).</td>
     </tr>
     <tr>
       <td>Where is my data stored?</td>
@@ -238,7 +287,7 @@
   </tbody>
 </table>
 
-<h2>4. System Requirements</h2>
+<h2>5. System Requirements</h2>
 <ul>
   <li><strong>Platform:</strong> iOS (iPhone and iPad)</li>
   <li><strong>Recommended:</strong> Latest iOS version supported by your device for best security and compatibility</li>
@@ -246,7 +295,7 @@
   <li><strong>Permissions:</strong> Camera (scanning), Photo Library (imports), Notifications (appeal reminders)—each requested only when needed</li>
 </ul>
 
-<h2>5. Reporting Bugs &amp; Feature Requests</h2>
+<h2>6. Reporting Bugs &amp; Feature Requests</h2>
 <p>We welcome constructive feedback. Email <a href="mailto:hello@familymedvault.com">hello@familymedvault.com</a> with:</p>
 <ul>
   <li>Bug reports: steps to reproduce, expected vs. actual behavior, screenshots or screen recordings if possible</li>
@@ -254,28 +303,28 @@
 </ul>
 <p>By submitting feedback, you grant us a non-exclusive right to use your suggestions to improve the App without compensation or attribution, to the extent permitted by law and our <a href="eula.html">EULA</a>.</p>
 
-<h2>6. Accessibility</h2>
-<p>BillShield uses standard iOS system fonts and supports Dynamic Type where implemented. If you encounter an accessibility barrier, please email us with your device, iOS version, and a description of the issue. We will make reasonable efforts to address serious accessibility concerns in future updates, subject to technical and resource constraints.</p>
+<h2>7. Accessibility</h2>
+<p>BillShield uses standard iOS system fonts and supports Dynamic Type where implemented. If you encounter an accessibility barrier, please email us with your device, iOS version, and a description of the issue. We will make reasonable efforts to address serious accessibility concerns in future updates, subject to technical and resource constraints as an individual developer.</p>
 
-<h2>7. Important Disclaimers (Please Read)</h2>
-<p class="caps"><strong>BILLSHIELD IS PROVIDED FOR EDUCATIONAL AND ORGANIZATIONAL PURPOSES ONLY.</strong> The Developer is an individual software creator, not a medical provider, attorney, insurer, licensed patient advocate, or billing negotiator on your behalf.</p>
+<h2>8. Important Disclaimers (Please Read)</h2>
+<p class="caps"><strong>BILLSHIELD IS PROVIDED FOR EDUCATIONAL AND ORGANIZATIONAL PURPOSES ONLY.</strong> The Developer is an individual software creator, not a medical provider, attorney, insurer, licensed patient advocate, or billing negotiator acting on your behalf.</p>
 <ul>
   <li>AI-generated and rule-based outputs may be <strong>incomplete or inaccurate</strong>. Always verify amounts, codes, deadlines, and appeal procedures with your insurer and healthcare providers.</li>
-  <li>The Developer does <strong>not</strong> guarantee any billing outcome, refund, coverage decision, or savings amount.</li>
-  <li>Support responses are informational and do not create a professional, fiduciary, or HIPAA business-associate relationship.</li>
-  <li>To the maximum extent permitted by law, support is provided <strong>“as is”</strong> without warranties of any kind. See our <a href="eula.html">EULA</a> for full limitation-of-liability terms.</li>
-  <li>We may update, suspend, or discontinue features (including Cloud AI or sync) with or without notice, subject to applicable law and App Store rules.</li>
-  <li>We may refuse or limit support for abusive, fraudulent, or unlawful use, including attempts to circumvent Cloud AI quotas or security controls.</li>
+  <li>The Developer does <strong>not</strong> guarantee any billing outcome, refund, coverage decision, savings amount, or successful appeal.</li>
+  <li>Support responses are informational and do not create a professional, fiduciary, attorney-client, or HIPAA business-associate relationship.</li>
+  <li>To the maximum extent permitted by law, support is provided <strong>“as is”</strong> without warranties of any kind. See our <a href="eula.html">EULA</a> for full limitation-of-liability and indemnification terms.</li>
+  <li>We may update, suspend, or discontinue features (including Cloud AI, Active Cases, or sync) with or without notice, subject to applicable law and App Store rules.</li>
+  <li>We may refuse or limit support for abusive, fraudulent, or unlawful use, including attempts to circumvent Active Case limits, Cloud AI quotas, or security controls.</li>
 </ul>
 
-<h2>8. Related Documents</h2>
+<h2>9. Related Documents</h2>
 <ul>
-  <li><a href="privacy-policy.html">Privacy Policy</a> — how we collect, use, and protect information</li>
-  <li><a href="eula.html">End User License Agreement (EULA)</a> — license terms, subscriptions, Apple relationship, liability limits</li>
+  <li><a href="privacy-policy.html">Privacy Policy</a> — how we collect, use, and protect information; Active Cases and usage metering</li>
+  <li><a href="eula.html">End User License Agreement (EULA)</a> — license terms, subscriptions, consumables, Apple relationship, liability limits</li>
   <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a> — applies to App Store copies</li>
 </ul>
 
-<p class="caps" style="margin-top: 2rem;"><em>BillShield © 2026. Developed and supported by an individual developer. Apple, App Store, iPhone, iPad, and Sign in with Apple are trademarks of Apple Inc.</em></p>
+<p class="caps" style="margin-top: 2rem;"><em>BillShield © 2026. Developed and supported by an individual developer. Apple, App Store, iPhone, iPad, and Sign in with Apple are trademarks of Apple Inc. OpenAI, Supabase, and RevenueCat are trademarks of their respective owners.</em></p>
 
 </body>
 </html>
