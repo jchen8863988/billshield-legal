@@ -15,12 +15,12 @@
       color: #1a1a1a;
       background: #fff;
     }
-  @media (prefers-color-scheme: dark) {
-    body { color: #e8e8e8; background: #111; }
-    a { color: #6eb6ff; }
-    table, th, td { border-color: #444; }
-    th { background: #222; }
-  }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e8e8e8; background: #111; }
+      a { color: #6eb6ff; }
+      table, th, td { border-color: #444; }
+      th { background: #222; }
+    }
     h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
     h2 { font-size: 1.2rem; margin-top: 2rem; border-bottom: 1px solid #ccc; padding-bottom: 0.25rem; }
     h3 { font-size: 1rem; margin-top: 1.25rem; }
@@ -31,18 +31,21 @@
     th { background: #f5f5f5; }
     .caps { font-size: 0.85rem; }
     a { color: #0a2540; }
+    ul { padding-left: 1.35rem; }
   </style>
 </head>
 <body>
 
 <h1>BillShield Privacy Policy</h1>
-<p class="meta"><strong>Last updated:</strong> May 22, 2026<br />
-<strong>Effective date:</strong> May 22, 2026<br />
-<strong>Contact:</strong> <a href="mailto:hello@familymedvault.com">hello@familymedvault.com</a></p>
+<p class="meta"><strong>Last updated:</strong> May 24, 2026<br />
+<strong>Effective date:</strong> May 24, 2026<br />
+<strong>Contact:</strong> <a href="mailto:hello@familymedvault.com">hello@familymedvault.com</a><br />
+<strong>Support:</strong> <a href="support.html">support.html</a> ·
+<strong>Terms:</strong> <a href="eula.html">eula.html</a></p>
 
 <p>This Privacy Policy describes how <strong>BillShield</strong> (“<strong>App</strong>,” “<strong>we</strong>,” “<strong>us</strong>,” or “<strong>our</strong>”) collects, uses, discloses, and protects information when you use the BillShield mobile application for iOS (and related services). BillShield is developed and operated by an <strong>individual developer</strong> (the “<strong>Developer</strong>”). By using the App, you agree to this Privacy Policy.</p>
 
-<p><strong>Summary:</strong> BillShield is designed <strong>local-first</strong>. Your medical bills and EOBs stay on your device by default. Optional <strong>Cloud AI</strong> features require your explicit consent and Sign in with Apple. We do <strong>not</strong> sell your personal information. You never need to provide your own OpenAI API key.</p>
+<p><strong>Summary:</strong> BillShield is <strong>local-first</strong>. Your medical bills and EOBs stay on your device by default. You manage <strong>Active Cases</strong> (saved billing disputes) according to your plan. Optional <strong>Cloud AI</strong> requires Sign in with Apple and your explicit consent. Cloud usage is subject to fair server-side limits (including AI usage metering you may see summarized in Settings). We do <strong>not</strong> sell your personal information. You never provide your own OpenAI API key.</p>
 
 <h2>1. Who We Are (Data Controller)</h2>
 <p>The Developer is the data controller for personal information processed through BillShield, except where third parties (listed below) process data on our behalf as service providers.</p>
@@ -52,8 +55,8 @@
 </ul>
 
 <h2>2. Scope &amp; Important Disclaimers</h2>
-<p>BillShield is an <strong>educational and organizational tool</strong> to help U.S. consumers understand medical bills and insurance Explanation of Benefits (EOBs). It is <strong>not</strong> medical, legal, insurance, or financial advice. The Developer is <strong>not</strong> a healthcare provider, insurer, or law firm and is <strong>not</strong> a “covered entity” or “business associate” under HIPAA unless separately agreed in writing.</p>
-<p>AI-generated outputs may be incomplete or inaccurate. You are responsible for verifying all amounts, codes, and deadlines with your insurer and healthcare providers before taking action.</p>
+<p>BillShield is an <strong>educational and organizational tool</strong> to help U.S. consumers understand medical bills and insurance Explanation of Benefits (EOBs). It is <strong>not</strong> medical, legal, insurance, or financial advice. The Developer is <strong>not</strong> a healthcare provider, insurer, law firm, or licensed patient advocate and is <strong>not</strong> a “covered entity” or “business associate” under HIPAA unless separately agreed in writing.</p>
+<p>AI-generated and rule-based outputs may be incomplete or inaccurate. You are responsible for verifying all amounts, codes, and deadlines with your insurer and healthcare providers before taking action.</p>
 
 <h2>3. Information We Collect</h2>
 
@@ -76,15 +79,21 @@
       <td>Yes</td>
     </tr>
     <tr>
+      <td>Active Case metadata (title, insurer, denial code, linked bill/EOB IDs, status)</td>
+      <td>Case limits, appeal tracking, cross-device sync when signed in</td>
+      <td>On device; Supabase <code>medical_cases</code> when signed in</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
       <td>Apple User ID (via Sign in with Apple)</td>
-      <td>Account, save history, subscription linking, Cloud AI authentication</td>
-      <td>Device; Apple; optional Supabase Auth</td>
+      <td>Account, save history, subscriptions, Cloud AI authentication</td>
+      <td>Device; Apple; Supabase Auth</td>
       <td>Yes</td>
     </tr>
     <tr>
       <td>Email / name from Apple (if you choose to share)</td>
       <td>Account profile, support</td>
-      <td>Optional Supabase <code>profiles</code> table</td>
+      <td>Supabase <code>profiles</code></td>
       <td>Yes</td>
     </tr>
   </tbody>
@@ -97,14 +106,19 @@
   </thead>
   <tbody>
     <tr>
-      <td>Subscription / entitlement status</td>
-      <td>BillShield Pro features</td>
-      <td>Apple App Store; RevenueCat</td>
+      <td>Subscription / entitlement status (Free, Pro, Appeal Pack)</td>
+      <td>Unlock plan features, case limits, usage allowances</td>
+      <td>Apple App Store; RevenueCat; Supabase <code>profiles</code></td>
     </tr>
     <tr>
-      <td>Cloud AI usage counts (monthly analyses &amp; appeal letters)</td>
-      <td>Quota enforcement, display in Settings</td>
-      <td>On device; server (<code>cloud_ai_usage_monthly</code>) when signed in</td>
+      <td>Plan tier, active case limit, premium appeal review balance</td>
+      <td>Enforce Active Case limits and premium features</td>
+      <td>Supabase <code>profiles</code> when signed in</td>
+    </tr>
+    <tr>
+      <td>Cloud AI / usage metering (action type, credits consumed, timestamps)</td>
+      <td>Fair-use enforcement, abuse prevention, cost control</td>
+      <td>Supabase <code>user_ai_usage</code>; summarized in App Settings</td>
     </tr>
     <tr>
       <td>Appeal reminder preferences &amp; notification permission status</td>
@@ -112,8 +126,8 @@
       <td>On device; Apple notification system</td>
     </tr>
     <tr>
-      <td>Consent choices (analytics / Cloud AI)</td>
-      <td>GDPR-aligned preferences</td>
+      <td>Consent choices (Cloud AI, notifications)</td>
+      <td>Privacy preferences</td>
       <td>On device (Secure Store)</td>
     </tr>
   </tbody>
@@ -126,59 +140,91 @@
   <li>We do <strong>not</strong> sell your personal information.</li>
   <li>We do <strong>not</strong> use your data for cross-app advertising or “tracking” as defined under Apple’s App Tracking Transparency framework.</li>
   <li>We do <strong>not</strong> knowingly collect information from children under 13.</li>
+  <li>We do <strong>not</strong> collect payment card numbers (Apple processes payments).</li>
 </ul>
 
 <h2>4. How We Use Information</h2>
 <ul>
-  <li>Provide core features: scan/OCR, denial-code explanations, appeal timelines, templates, and local audit rules.</li>
-  <li>Save your bills and appeals when you sign in with Apple.</li>
-  <li>Process optional <strong>Cloud AI</strong> requests you explicitly enable (deep analysis, appeal-letter drafts).</li>
-  <li>Manage subscriptions via Apple In-App Purchase and RevenueCat.</li>
+  <li>Provide core features: scan/OCR, denial-code explanations, appeal timelines, templates, and on-device audit rules.</li>
+  <li>Manage <strong>Active Cases</strong> within your plan limits.</li>
+  <li>Save bills, appeals, and case history when you sign in with Apple.</li>
+  <li>Process optional <strong>Cloud AI</strong> requests you explicitly enable.</li>
+  <li>Validate and manage <strong>BillShield Pro</strong> subscriptions and <strong>Appeal Pack</strong> purchases via Apple In-App Purchase and RevenueCat.</li>
+  <li>Enforce fair usage limits and prevent abuse of Cloud AI.</li>
   <li>Send local push notifications for appeal deadlines (only if you enable them).</li>
-  <li>Improve security, prevent abuse, and enforce Cloud AI usage limits.</li>
   <li>Respond to support requests you send to us.</li>
 </ul>
 
-<h2>5. Local-First &amp; Cloud AI (Critical)</h2>
+<h2>5. Plans, Active Cases &amp; Usage Limits</h2>
 
-<h3>5.1 Default: on-device processing</h3>
+<h3>5.1 What you see: Active Cases</h3>
+<p>BillShield organizes saved billing work as <strong>Active Cases</strong> (e.g., an open bill dispute or appeal). Your plan determines how many Active Cases you may have open at once. Free users may have a limited number; Pro subscribers receive higher limits. Case counts may be shown in the App (e.g., “1 / 1 used”).</p>
+
+<h3>5.2 Server-side usage metering (Cloud AI)</h3>
+<p>To control cost and prevent abuse, Cloud AI features are subject to <strong>server-side usage limits</strong> tied to your plan. These limits are enforced on our backend when you are signed in. You may see summarized usage in Settings; detailed metering is used for security and billing integrity and is not marketed as a separate product feature.</p>
+<p><strong>Unused allowances do not roll over</strong> to the next billing cycle unless we state otherwise in the App or EULA.</p>
+
+<h3>5.3 Current plan overview (subject to change in App Store)</h3>
+<table>
+  <thead>
+    <tr><th>Plan</th><th>Active Cases (typical)</th><th>Cloud usage pool (typical / month)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Free</td><td>1</td><td>Fair-use limited</td></tr>
+    <tr><td>BillShield Pro (monthly)</td><td>10</td><td>Expanded</td></tr>
+    <tr><td>BillShield Pro (annual)</td><td>25</td><td>Expanded</td></tr>
+    <tr><td>One-time Appeal Pack</td><td>—</td><td>May add premium appeal review + additional usage</td></tr>
+  </tbody>
+</table>
+<p>Exact limits are enforced in the App and may be updated; material changes will be reflected in this Policy or the EULA.</p>
+
+<h2>6. Local-First &amp; Cloud AI</h2>
+
+<h3>6.1 Default: on-device processing</h3>
 <p>Unless you turn on Cloud AI, bill and EOB content is processed <strong>only on your iPhone or iPad</strong>. OCR (Apple Vision), denial decoding, timelines, and offline appeal templates do not require uploading document content to our servers.</p>
 
-<h3>5.2 Optional Cloud AI</h3>
+<h3>6.2 Optional Cloud AI</h3>
 <p>If you enable <strong>Cloud AI Assistance</strong> in Settings (and, for scans, check per-document cloud review):</p>
 <ul>
   <li>You must <strong>Sign in with Apple</strong> and obtain a Supabase authentication session.</li>
-  <li>Selected document <strong>text</strong> (not raw image files by default in our extraction pipeline) is sent from the App to our <strong>Supabase Edge Function</strong> (<code>ai-proxy</code>), which forwards it to <strong>OpenAI</strong> for processing.</li>
-  <li>Requests include your authenticated user token; anonymous API access to Cloud AI is blocked (<code>verify_jwt=true</code>).</li>
-  <li>Monthly usage limits are enforced on our servers.</li>
+  <li>Selected document <strong>text</strong> is sent from the App to our <strong>Supabase Edge Function</strong> (<code>ai-proxy</code>), which forwards it to <strong>OpenAI</strong> for processing.</li>
+  <li>Requests require your authenticated user token; anonymous Cloud AI access is blocked.</li>
+  <li>Usage is metered and limited on our servers according to your plan.</li>
 </ul>
 <p>You can turn Cloud AI off at any time in Settings. Turning it off stops new cloud uploads; it does not by itself delete data already processed by third-party processors subject to their retention policies.</p>
 
-<h2>6. Third-Party Service Providers</h2>
-<p>We use trusted processors who may access information only to perform services for us:</p>
+<h2>7. Subscriptions &amp; In-App Purchases</h2>
+<p>BillShield may offer:</p>
+<ul>
+  <li><strong>BillShield Pro</strong> (auto-renewable subscription, monthly or annual) — unlocks higher Active Case limits and expanded Cloud AI usage.</li>
+  <li><strong>One-time Appeal Pack</strong> (consumable in-app purchase) — may add a premium appeal review and additional usage allowance.</li>
+</ul>
+<p>All payments are processed by <strong>Apple</strong>. We receive entitlement and purchase status via RevenueCat, not your full payment card details. Manage or cancel subscriptions in <strong>Settings → Apple ID → Subscriptions</strong>. Use <strong>Restore Purchases</strong> in the App after signing in with the same Apple ID.</p>
+
+<h2>8. Third-Party Service Providers</h2>
 <table>
   <thead>
     <tr><th>Provider</th><th>Role</th><th>Typical location</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>Apple</strong> (Sign in with Apple, App Store, IAP)</td><td>Authentication, payments, subscriptions</td><td>United States / global</td></tr>
-    <tr><td><strong>Supabase</strong></td><td>Auth, database (profiles, optional bill sync, usage quotas), Edge Functions</td><td>United States (project region)</td></tr>
+    <tr><td><strong>Supabase</strong></td><td>Auth, database (profiles, medical_cases, usage logs), Edge Functions</td><td>United States (project region)</td></tr>
     <tr><td><strong>OpenAI</strong></td><td>Cloud AI text analysis (only when you opt in)</td><td>United States</td></tr>
-    <tr><td><strong>RevenueCat</strong></td><td>Subscription entitlement management</td><td>United States</td></tr>
+    <tr><td><strong>RevenueCat</strong></td><td>Subscription and purchase entitlement management</td><td>United States</td></tr>
   </tbody>
 </table>
 <p>We require service providers to protect information consistent with this Policy and applicable law. Their own privacy policies also apply.</p>
 
-<h2>7. Legal Bases (EEA / UK / Switzerland users)</h2>
+<h2>9. Legal Bases (EEA / UK / Switzerland users)</h2>
 <p>If you are in the EEA, UK, or Switzerland, we rely on:</p>
 <ul>
-  <li><strong>Contract:</strong> to provide features you request (e.g., save bills after sign-in).</li>
-  <li><strong>Consent:</strong> for optional Cloud AI, analytics (if offered), and notifications.</li>
-  <li><strong>Legitimate interests:</strong> security, fraud prevention, quota enforcement, and improving the App—balanced against your rights.</li>
+  <li><strong>Contract:</strong> to provide features you request (e.g., save cases, subscriptions).</li>
+  <li><strong>Consent:</strong> for optional Cloud AI and notifications.</li>
+  <li><strong>Legitimate interests:</strong> security, fraud prevention, usage enforcement, and improving the App—balanced against your rights.</li>
 </ul>
 <p>You may withdraw consent at any time without affecting the lawfulness of processing before withdrawal.</p>
 
-<h2>8. Health &amp; Sensitive Information</h2>
+<h2>10. Health &amp; Sensitive Information</h2>
 <p>Medical billing documents may contain <strong>Protected Health Information (PHI)</strong> or other sensitive personal data. We treat this data carefully:</p>
 <ul>
   <li><strong>Default:</strong> processing stays on your device.</li>
@@ -187,15 +233,15 @@
 </ul>
 <p>If you are a HIPAA-covered entity or business associate, do not use BillShield to process PHI subject to a BAA unless you have a separate written agreement with the Developer (not offered by default).</p>
 
-<h2>9. Data Retention</h2>
+<h2>11. Data Retention</h2>
 <ul>
   <li><strong>On device:</strong> until you delete data in <strong>Settings → Privacy → Delete all data</strong>, or uninstall the App.</li>
-  <li><strong>Supabase account data:</strong> retained while your account is active; you may request deletion (see Section 11).</li>
-  <li><strong>Cloud AI usage logs:</strong> monthly counters retained for quota and billing integrity.</li>
+  <li><strong>Supabase account data</strong> (profiles, medical_cases): retained while your account is active; you may request deletion (see Section 13).</li>
+  <li><strong>Usage metering logs</strong> (<code>user_ai_usage</code>): retained for quota enforcement, security, and billing integrity.</li>
   <li><strong>Support emails:</strong> retained as long as needed to resolve your inquiry, then deleted or anonymized.</li>
 </ul>
 
-<h2>10. Security</h2>
+<h2>12. Security</h2>
 <p>We use reasonable administrative, technical, and organizational measures, including:</p>
 <ul>
   <li>TLS encryption in transit for cloud features;</li>
@@ -206,56 +252,52 @@
 </ul>
 <p>No method of transmission or storage is 100% secure. You use the App at your own risk.</p>
 
-<h2>11. Your Privacy Rights</h2>
+<h2>13. Your Privacy Rights</h2>
 
-<h3>11.1 All users</h3>
+<h3>13.1 All users</h3>
 <ul>
   <li><strong>Access / export:</strong> use in-app export where available.</li>
-  <li><strong>Delete:</strong> Settings → Privacy → Delete all data; uninstall the App.</li>
+  <li><strong>Delete:</strong> Settings → Privacy → Delete all data; uninstall the App; email us to request cloud account deletion.</li>
   <li><strong>Opt out of Cloud AI:</strong> disable in Settings; revoke per-scan checkboxes.</li>
   <li><strong>Notifications:</strong> disable in App or iOS Settings.</li>
+  <li><strong>Subscriptions:</strong> manage or cancel via Apple ID settings; refunds via Apple.</li>
 </ul>
 
-<h3>11.2 California residents (CCPA / CPRA)</h3>
-<p>We do <strong>not</strong> “sell” or “share” personal information for cross-context behavioral advertising. California residents may request:</p>
-<ul>
-  <li>Categories of personal information collected;</li>
-  <li>Deletion (subject to legal exceptions);</li>
-  <li>Correction of inaccurate information.</li>
-</ul>
-<p>Submit requests to <a href="mailto:hello@familymedvault.com">hello@familymedvault.com</a>. We will verify your request (e.g., via the Apple ID email associated with your account). We will not discriminate against you for exercising privacy rights.</p>
+<h3>13.2 California residents (CCPA / CPRA)</h3>
+<p>We do <strong>not</strong> “sell” or “share” personal information for cross-context behavioral advertising. California residents may request access, deletion, or correction. Submit requests to <a href="mailto:hello@familymedvault.com">hello@familymedvault.com</a>. We will verify your request and will not discriminate against you for exercising privacy rights.</p>
 
-<h3>11.3 EEA / UK residents</h3>
+<h3>13.3 EEA / UK residents</h3>
 <p>You may have rights to access, rectify, erase, restrict, port, or object to processing, and to lodge a complaint with your supervisory authority. Contact us first at <a href="mailto:hello@familymedvault.com">hello@familymedvault.com</a>.</p>
 
-<h2>12. Children’s Privacy</h2>
+<h2>14. Children’s Privacy</h2>
 <p>BillShield is not directed to children under <strong>13</strong> (or the minimum age in your jurisdiction). We do not knowingly collect personal information from children. If you believe a child provided us information, contact us and we will delete it.</p>
 
-<h2>13. International Data Transfers</h2>
+<h2>15. International Data Transfers</h2>
 <p>If you use Cloud AI or sign in, data may be processed in the <strong>United States</strong> by Supabase and OpenAI. Where required, we rely on appropriate safeguards (e.g., Standard Contractual Clauses offered by processors) for transfers from the EEA/UK.</p>
 
-<h2>14. Apple-Specific Disclosures</h2>
+<h2>16. Apple-Specific Disclosures</h2>
 <ul>
   <li><strong>Sign in with Apple:</strong> Apple provides a stable user identifier; email/name are shared only if you authorize Apple to share them.</li>
-  <li><strong>Subscriptions:</strong> Payments are processed by Apple; we receive entitlement status via RevenueCat, not your full payment card details.</li>
-  <li><strong>App Privacy labels:</strong> Our App Store privacy nutrition labels reflect this Policy. Contact data linked to you only when you sign in or contact support.</li>
+  <li><strong>Subscriptions &amp; IAP:</strong> Payments are processed by Apple; we receive entitlement status via RevenueCat, not your full payment card details.</li>
+  <li><strong>App Privacy labels:</strong> Our App Store privacy nutrition labels reflect this Policy.</li>
+  <li><strong>Account deletion:</strong> You may delete on-device data in the App and request cloud deletion by emailing us.</li>
 </ul>
 
-<h2>15. Changes to This Policy</h2>
+<h2>17. Changes to This Policy</h2>
 <p>We may update this Privacy Policy from time to time. We will post the revised version at the same URL and update the “Last updated” date. Material changes may also be communicated in-app. Continued use after the effective date constitutes acceptance.</p>
 
-<h2>16. Limitation of Liability (Developer Protection)</h2>
-<p class="caps">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE APP AND ALL SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, AND NON-INFRINGEMENT. THE DEVELOPER DOES NOT WARRANT THAT AI OUTPUTS, SAVINGS ESTIMATES, APPEAL DEADLINES, OR DENIAL INTERPRETATIONS ARE COMPLETE, CURRENT, OR CORRECT.</p>
-<p class="caps">TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE DEVELOPER SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING FROM YOUR USE OF THE APP, CLOUD AI, OR RELIANCE ON ANY OUTPUT. THE DEVELOPER’S TOTAL LIABILITY FOR ANY CLAIM RELATING TO THE APP SHALL NOT EXCEED THE GREATER OF (A) USD $100 OR (B) THE AMOUNT YOU PAID TO THE DEVELOPER FOR THE APP OR SUBSCRIPTIONS IN THE TWELVE (12) MONTHS BEFORE THE CLAIM.</p>
+<h2>18. Limitation of Liability (Developer Protection)</h2>
+<p class="caps">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE APP AND ALL SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, AND NON-INFRINGEMENT. THE DEVELOPER DOES NOT WARRANT THAT AI OUTPUTS, SAVINGS ESTIMATES, APPEAL DEADLINES, CASE LIMITS, OR DENIAL INTERPRETATIONS ARE COMPLETE, CURRENT, OR CORRECT.</p>
+<p class="caps">TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE DEVELOPER SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING FROM YOUR USE OF THE APP, CLOUD AI, SUBSCRIPTIONS, OR RELIANCE ON ANY OUTPUT. THE DEVELOPER’S TOTAL LIABILITY FOR ANY CLAIM RELATING TO THE APP SHALL NOT EXCEED THE GREATER OF (A) USD $100 OR (B) THE AMOUNT YOU PAID TO THE DEVELOPER FOR THE APP OR SUBSCRIPTIONS IN THE TWELVE (12) MONTHS BEFORE THE CLAIM.</p>
 <p>Some jurisdictions do not allow certain limitations; in those cases, limitations apply to the fullest extent permitted.</p>
 
-<h2>17. Indemnification</h2>
+<h2>19. Indemnification</h2>
 <p class="caps">You agree to indemnify and hold harmless the Developer from claims arising out of your misuse of the App, your violation of this Policy, or your violation of any law or third-party rights, except to the extent caused by the Developer’s gross negligence or willful misconduct where such limitation is prohibited by law.</p>
 
-<h2>18. Governing Law &amp; Disputes</h2>
+<h2>20. Governing Law &amp; Disputes</h2>
 <p>This Policy is governed by the laws of the <strong>State of California, United States</strong>, without regard to conflict-of-law rules, except where mandatory consumer protection laws in your country of residence provide otherwise. Any dispute shall be brought in the state or federal courts located in California, unless applicable law requires a different forum.</p>
 
-<h2>19. Contact Us</h2>
+<h2>21. Contact Us</h2>
 <p>For privacy questions, requests, or complaints:</p>
 <p><strong>Email:</strong> <a href="mailto:hello@familymedvault.com">hello@familymedvault.com</a><br />
 <strong>Subject line:</strong> BillShield Privacy Request</p>
@@ -266,4 +308,3 @@
 
 </body>
 </html>
-
