@@ -39,11 +39,12 @@
 <h1>BillShield End User License Agreement (EULA)</h1>
 <p class="meta"><strong>Last updated:</strong> May 24, 2026<br />
 <strong>Effective date:</strong> May 24, 2026<br />
+<strong>App:</strong> BillShield — Medical Bill Auditor (iOS, Bundle ID <code>com.jchen.BillShield</code>)<br />
 <strong>Contact:</strong> <a href="mailto:hello@familymedvault.com">hello@familymedvault.com</a><br />
 <strong>Support:</strong> <a href="support.html">support.html</a> ·
 <strong>Privacy:</strong> <a href="privacy-policy.html">privacy-policy.html</a></p>
 
-<p>This End User License Agreement (“<strong>Agreement</strong>” or “<strong>EULA</strong>”) is a legal contract between you (“<strong>User</strong>” or “<strong>you</strong>”) and the <strong>individual developer</strong> of BillShield (“<strong>Developer</strong>,” “<strong>Licensor</strong>,” “<strong>we</strong>,” “<strong>us</strong>,” or “<strong>our</strong>”) for the BillShield mobile application (“<strong>Licensed Application</strong>” or “<strong>App</strong>”), including updates and documentation.</p>
+<p>This End User License Agreement (“<strong>Agreement</strong>” or “<strong>EULA</strong>”) is a legal contract between you (“<strong>User</strong>” or “<strong>you</strong>”) and the <strong>individual developer</strong> of BillShield (“<strong>Developer</strong>,” “<strong>Licensor</strong>,” “<strong>we</strong>,” “<strong>us</strong>,” or “<strong>our</strong>”) for the BillShield mobile application for iPhone and iPad (“<strong>Licensed Application</strong>” or “<strong>App</strong>”), including updates and related documentation.</p>
 
 <p><strong>BY DOWNLOADING, INSTALLING, ACCESSING, OR USING THE APP, YOU AGREE TO THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT USE THE APP AND DELETE IT FROM YOUR DEVICE.</strong></p>
 
@@ -69,26 +70,27 @@
   <li>Rent, lease, lend, sell, redistribute, or sublicense the App;</li>
   <li>Remove proprietary notices;</li>
   <li>Use the App for unlawful purposes or to harm others;</li>
-  <li>Circumvent Active Case limits, Cloud AI usage limits, authentication, or security controls;</li>
+  <li>Circumvent Active Case limits, Cloud AI credit limits, authentication, or security controls;</li>
   <li>Share, resell, or pool subscription benefits or consumable purchases with others.</li>
 </ul>
 
 <h2>3. Description of Service</h2>
 <p>BillShield helps U.S. consumers understand medical bills and insurance Explanation of Benefits (EOBs). Features may include:</p>
 <ul>
-  <li><strong>Local-first</strong> on-device scanning/OCR, denial-code explanations, appeal timelines, and templates;</li>
+  <li><strong>Local-first</strong> on-device scanning/OCR, denial-code explanations, appeal timelines, negotiation scripts, and offline appeal templates;</li>
   <li><strong>Active Cases</strong> — saved billing disputes or appeals, subject to plan limits;</li>
-  <li>Optional <strong>Cloud AI Assistance</strong> (off by default; per-document opt-in when enabled);</li>
-  <li>Optional paid features via <strong>Apple In-App Purchase</strong>, including <strong>BillShield Pro</strong> subscriptions and a one-time <strong>Appeal Pack</strong>.</li>
+  <li>Optional <strong>Cloud AI Assistance</strong> (off by default; global toggle plus per-document opt-in when enabled);</li>
+  <li><strong>Price Compare</strong> — illustrative charge ranges from bundled sample data (not live CMS or hospital price files);</li>
+  <li>Optional paid features via <strong>Apple In-App Purchase</strong>, including <strong>BillShield Pro</strong> subscriptions and a one-time <strong>Appeal Pack</strong> consumable.</li>
 </ul>
-<p>The App is an <strong>educational and organizational tool only</strong>. It does <strong>not</strong> provide medical, legal, insurance, billing-advocacy, or financial advice. The Developer is not a healthcare provider, insurer, attorney, or licensed patient advocate.</p>
+<p>The App is an <strong>educational and organizational tool only</strong>. It does <strong>not</strong> provide medical, legal, insurance, billing-advocacy, or financial advice. The Developer is not a healthcare provider, insurer, attorney, or licensed patient advocate and does not file appeals or negotiate bills on your behalf.</p>
 
 <h2>4. No Professional or HIPAA Relationship</h2>
 <p>You acknowledge that:</p>
 <ul>
-  <li>AI outputs, OCR text, savings estimates, denial interpretations, appeal drafts, and deadline reminders may be <strong>incomplete or incorrect</strong>;</li>
+  <li>AI outputs, OCR text, savings estimates, denial interpretations, appeal drafts, deadline reminders, and price-compare ranges may be <strong>incomplete or incorrect</strong>;</li>
   <li>You must independently verify all amounts, codes, deadlines, and strategies with your insurer and providers before taking action;</li>
-  <li>The Developer is <strong>not</strong> a “covered entity” or “business associate” under HIPAA unless separately agreed in writing (not offered by default);</li>
+  <li>The Developer is <strong>not</strong> a HIPAA “covered entity” or “business associate” unless separately agreed in writing (not offered by default);</li>
   <li>Use of the App does not create a fiduciary, attorney-client, doctor-patient, or insurer relationship;</li>
   <li>Successful appeals, refunds, or savings are <strong>not guaranteed</strong>.</li>
 </ul>
@@ -97,111 +99,107 @@
 <p>You must be at least <strong>13 years old</strong> (or the minimum age required in your jurisdiction) and able to enter a binding contract. The App is intended for users in the United States dealing with U.S. medical billing contexts. If you are under 18, you represent that you have permission from a parent or legal guardian.</p>
 
 <h2>6. Accounts — Sign in with Apple</h2>
-<p>Saving bills, appeals, Active Cases, subscription linking, and Cloud AI require <strong>Sign in with Apple</strong>. You are responsible for your Apple ID, device security, and keeping your account credentials confidential. We may suspend or limit features if authentication fails, usage limits are exceeded, or abuse is detected.</p>
-<p>You may delete on-device data in the App and request cloud account deletion by emailing us (see Section 22). Account deletion may not restore prior purchases or subscription time.</p>
+<p>Saving bills, Active Cases, subscription linking, Cloud AI, and cross-device sync require <strong>Sign in with Apple</strong>. You are responsible for your Apple ID, device security, and keeping credentials confidential. We may suspend or limit features if authentication fails, usage limits are exceeded, or abuse is detected.</p>
+<p>You may delete on-device data in <strong>Settings → Privacy → Delete all data</strong>. To request deletion of cloud account data, email <a href="mailto:hello@familymedvault.com">hello@familymedvault.com</a> with subject <strong>BillShield Account Deletion</strong>. Account deletion may not restore prior purchases or subscription time.</p>
 
-<h2>7. Plans, Active Cases &amp; Usage Limits</h2>
+<h2>7. Plans, Active Cases &amp; AI Usage Limits</h2>
 
 <h3>7.1 Active Cases</h3>
-<p>BillShield organizes saved billing work as <strong>Active Cases</strong> (e.g., an open bill dispute or appeal). Your plan determines how many Active Cases you may have open at once. If you reach your limit, you must close, archive, or delete an existing case before opening a new one, or upgrade your plan where available.</p>
+<p>BillShield organizes saved billing work as <strong>Active Cases</strong>. Your plan determines how many may be open at once. If you reach your limit, you must close, archive, or delete an existing case, or upgrade, before opening a new one.</p>
 
-<h3>7.2 Cloud AI usage metering</h3>
-<p>Cloud AI features are subject to <strong>server-side usage limits</strong> tied to your plan. Limits are enforced on our backend when you are signed in. You may see summarized usage in Settings; detailed metering supports security, cost control, and billing integrity.</p>
-<p><strong>Unused allowances do not roll over</strong> to the next billing cycle unless we expressly state otherwise in the App. We may adjust limits, credit costs, or enforcement methods to maintain service quality, prevent abuse, or reflect third-party pricing, with notice as described in Section 19.</p>
+<h3>7.2 Cloud AI credits</h3>
+<p>When Cloud AI is enabled, features consume <strong>AI credits</strong> enforced on our servers. You may see summarized usage in Settings. <strong>Unused AI credits do not roll over</strong> to the next billing cycle unless we expressly state otherwise in the App.</p>
+<p>We may adjust limits, credit costs, or enforcement to maintain service quality, prevent abuse, or reflect third-party pricing, with notice as described in Section 20.</p>
 
-<h3>7.3 Current plan overview (subject to change)</h3>
+<h3>7.3 Current plan overview</h3>
+<p>Prices are shown in the App Store at purchase time and may vary by region. Typical U.S. pricing at last update:</p>
 <table>
   <thead>
-    <tr><th>Plan</th><th>Active Cases (typical)</th><th>Cloud usage pool (typical / month)</th></tr>
+    <tr><th>Plan</th><th>Active Cases</th><th>AI credits / billing cycle</th><th>Typical U.S. price</th></tr>
   </thead>
   <tbody>
-    <tr><td>Free</td><td>1</td><td>Fair-use limited</td></tr>
-    <tr><td>BillShield Pro (monthly)</td><td>10</td><td>Expanded</td></tr>
-    <tr><td>BillShield Pro (annual)</td><td>25</td><td>Expanded</td></tr>
-    <tr><td>One-time Appeal Pack</td><td>—</td><td>May add premium appeal review + additional usage</td></tr>
+    <tr><td>Free</td><td>1</td><td>20</td><td>Free</td></tr>
+    <tr><td>BillShield Pro (monthly auto-renewable)</td><td>10</td><td>300</td><td>USD $12.99 / month</td></tr>
+    <tr><td>BillShield Pro (annual auto-renewable)</td><td>25</td><td>500</td><td>USD $99 / year</td></tr>
+    <tr><td>Appeal Pack (one-time consumable)</td><td>—</td><td>+100 credits; +1 Premium Appeal Review</td><td>USD $24.99 (one-time)</td></tr>
   </tbody>
 </table>
-<p>Exact limits, prices, and feature availability are shown in the App and App Store at the time of purchase and may change. Material changes will be reflected in an updated EULA or in-app notice where required by law.</p>
+<p>Exact limits, prices, and feature availability are enforced in the App and App Store at the time of purchase. Material changes will be reflected in an updated EULA, <a href="privacy-policy.html">Privacy Policy</a>, or in-app notice where required by law.</p>
 
 <h2>8. Cloud AI (Optional)</h2>
-<p>Cloud AI is <strong>disabled by default</strong>. Unless you enable it:</p>
-<ul>
-  <li>Bill and EOB content is processed <strong>only on your device</strong> (local OCR and rules).</li>
-</ul>
+<p>Cloud AI is <strong>disabled by default</strong>. Unless you enable it, bill and EOB content is processed <strong>only on your device</strong>.</p>
 <p>If you enable <strong>Cloud AI Assistance</strong> in Settings (and, for scans, opt in per document):</p>
 <ul>
-  <li>You provide <strong>explicit consent</strong> in Settings and per-document where applicable;</li>
-  <li>You must be signed in; requests require authenticated tokens;</li>
-  <li>Selected document <strong>text</strong> may be sent to our Supabase Edge Function and processed by OpenAI;</li>
+  <li>You provide <strong>explicit consent</strong>;</li>
+  <li>You must be signed in with Apple; requests require authenticated tokens;</li>
+  <li>Selected document <strong>text</strong> may be sent to our Supabase Edge Function (<code>ai-proxy</code>) and processed by OpenAI;</li>
   <li>You do <strong>not</strong> supply your own OpenAI API key;</li>
   <li>Usage limits apply on our servers according to your plan;</li>
-  <li>You direct us to process opted-in content and accept third-party processor terms described in our <a href="privacy-policy.html">Privacy Policy</a>.</li>
+  <li>If the cloud service fails, times out, or credits are exhausted, the App may fall back to on-device analysis where possible.</li>
 </ul>
-<p>You may disable Cloud AI at any time in Settings. Disabling Cloud AI stops new cloud uploads; it does not by itself delete data already processed by third parties subject to their retention policies.</p>
+<p>You may disable Cloud AI at any time in Settings. See our <a href="privacy-policy.html">Privacy Policy</a> for data handling details.</p>
 
 <h2>9. Subscriptions, Consumables &amp; Billing</h2>
 
 <h3>9.1 BillShield Pro (auto-renewable subscription)</h3>
-<p>Paid features may be offered as auto-renewing subscriptions through <strong>Apple In-App Purchase</strong>:</p>
+<p>Paid features are offered as auto-renewing subscriptions through <strong>Apple In-App Purchase</strong>:</p>
+<ul>
+  <li><strong>Monthly:</strong> <code>com.jchen.BillShield.pro.monthly</code> (typical USD $12.99/month)</li>
+  <li><strong>Annual:</strong> <code>com.jchen.BillShield.pro.annual</code> (typical USD $99/year)</li>
+</ul>
+<p>Subscription terms:</p>
 <ul>
   <li>Payment is charged to your Apple ID account at confirmation of purchase;</li>
   <li>Subscriptions automatically renew unless canceled at least <strong>24 hours</strong> before the end of the current period;</li>
   <li>Your account is charged for renewal within 24 hours prior to the end of the current period at the then-current price;</li>
-  <li>You manage and cancel subscriptions in <strong>Settings → Apple ID → Subscriptions</strong> on your device;</li>
+  <li>You manage and cancel in <strong>Settings → Apple ID → Subscriptions</strong>;</li>
   <li>Free trials or introductory offers (if offered) convert to paid subscriptions unless canceled before the trial or offer ends;</li>
-  <li>Refunds are handled by Apple under Apple’s policies—we <strong>cannot</strong> issue App Store refunds directly;</li>
+  <li>Refunds are handled by Apple—we <strong>cannot</strong> issue App Store refunds directly (<a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a>);</li>
   <li>Use <strong>Restore Purchases</strong> in the App after signing in with the <strong>same Apple ID</strong> used for the original purchase.</li>
 </ul>
 
 <h3>9.2 Appeal Pack (consumable in-app purchase)</h3>
-<p>The App may offer a <strong>one-time Appeal Pack</strong> consumable purchase that may grant additional premium appeal review capacity and expanded Cloud AI usage. Consumables:</p>
+<p>The App offers a <strong>one-time Appeal Pack</strong> consumable purchase (<code>com.jchen.BillShield.appeal.pack</code>, typical USD $24.99) that may grant <strong>+1 Premium Appeal Review</strong> and <strong>+100 AI credits</strong>. Consumables:</p>
 <ul>
-  <li>Are non-transferable and tied to your Apple ID account;</li>
-  <li>May be consumed when you use the associated premium features;</li>
+  <li>Are non-transferable and tied to your Apple ID;</li>
+  <li>May be consumed when you use associated premium features;</li>
   <li>Are generally <strong>non-refundable</strong> except as required by law or through Apple’s refund process;</li>
-  <li>Do not automatically renew.</li>
+  <li>Do not automatically renew and do not unlock BillShield Pro by themselves.</li>
 </ul>
 
 <h3>9.3 Subscription infrastructure</h3>
-<p>Subscription and purchase entitlements may be validated via <strong>RevenueCat</strong> and synced to our backend to enforce plan limits. We do not receive your full payment card details—Apple processes payments.</p>
+<p>Entitlements may be validated via <strong>RevenueCat</strong> and synced to our backend to enforce plan limits. We do not receive your full payment card details—Apple processes payments.</p>
 
 <h3>9.4 Price and feature changes</h3>
 <p>We may change subscription prices, plan limits, or included features. Where required by Apple or applicable law, you will receive notice and an opportunity to accept or cancel before a price increase takes effect on renewal.</p>
 
 <h2>10. User Content</h2>
-<p>You retain ownership of bills, EOBs, appeal letters, and other content you input (“<strong>User Content</strong>”). You grant us a limited, worldwide, royalty-free license to host, process, transmit, display, and store your User Content <strong>solely</strong> to operate the App features you request (including Cloud AI when enabled and case sync when signed in).</p>
-<p>You represent and warrant that:</p>
-<ul>
-  <li>You have the right to upload and use such content;</li>
-  <li>Your User Content does not violate law or third-party rights;</li>
-  <li>You will not upload content you are not authorized to share (e.g., another person’s medical records without permission).</li>
-</ul>
-<p>We may remove or restrict access to User Content that violates this Agreement or poses a security or legal risk.</p>
+<p>You retain ownership of bills, EOBs, appeal letters, and other content you input (“<strong>User Content</strong>”). You grant us a limited, worldwide, royalty-free license to host, process, transmit, display, and store User Content <strong>solely</strong> to operate features you request (including Cloud AI when enabled and case sync when signed in).</p>
+<p>You represent that you have the right to upload User Content, that it does not violate law or third-party rights, and that you will not upload another person’s medical records without authorization.</p>
 
 <h2>11. Acceptable Use</h2>
 <p>You agree not to misuse the App, including by:</p>
 <ul>
-  <li>Scraping, automated abuse, or excessive requests to our APIs or Cloud AI;</li>
-  <li>Attempting unauthorized access, probing security, or interfering with service operation;</li>
+  <li>Automated abuse or excessive Cloud AI requests;</li>
+  <li>Unauthorized access, security probing, or service interference;</li>
   <li>Uploading malware, fraudulent documents, or false insurance claims;</li>
-  <li>Harassing others or using the App for unlawful purposes;</li>
   <li>Creating multiple accounts or devices to evade plan limits;</li>
   <li>Reverse engineering usage metering or case-limit enforcement.</li>
 </ul>
 
 <h2>12. Intellectual Property</h2>
-<p>The App, software, trademarks, UI, denial-code databases, templates, and documentation are owned by the Developer or licensors and protected by intellectual property laws. No rights are granted except the limited license in Section 2. Feedback you provide may be used by us without obligation to you.</p>
+<p>The App, software, trademarks, UI, denial-code databases, templates, and documentation are owned by the Developer or licensors and protected by intellectual property laws. No rights are granted except the limited license in Section 2. Feedback may be used by us without obligation to you.</p>
 
 <h2>13. Privacy</h2>
-<p>Our <a href="privacy-policy.html">Privacy Policy</a> describes data practices and is incorporated into this Agreement by reference. By using the App, you consent to those practices. The App is <strong>local-first</strong> by default; cloud processing occurs only as described in the Privacy Policy and when you opt in.</p>
+<p>Our <a href="privacy-policy.html">Privacy Policy</a> describes data practices and is incorporated into this Agreement by reference. The App is <strong>local-first</strong> by default; cloud processing occurs only as described in the Privacy Policy and when you opt in.</p>
 
 <h2>14. Service Availability &amp; Modifications</h2>
-<p>We may modify, suspend, or discontinue any part of the App (including features, limits, third-party integrations, or supported insurers/codes) at any time, with or without notice, except where prohibited by law. We are not liable for downtime, data loss, or changes caused by third-party services (Apple, Supabase, OpenAI, RevenueCat, or your network provider).</p>
-<p>We may release updates that are required for security or compatibility. Some updates may be mandatory to continue using certain features.</p>
+<p>We may modify, suspend, or discontinue any part of the App (including features, limits, third-party integrations, or supported content) at any time, with or without notice, except where prohibited by law. We are not liable for downtime, data loss, or changes caused by third-party services (Apple, Supabase, OpenAI, RevenueCat, or your network provider).</p>
+<p>Updates may be required for security or compatibility. Some updates may be mandatory to continue using certain features.</p>
 
 <h2>15. Disclaimers</h2>
 <p class="caps">THE LICENSED APPLICATION AND ALL RELATED SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE,” WITH ALL FAULTS AND WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE DEVELOPER DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, ACCURACY, QUIET ENJOYMENT, AND NON-INFRINGEMENT.</p>
-<p class="caps">WITHOUT LIMITING THE FOREGOING, WE DO NOT WARRANT THAT: (A) THE APP WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE; (B) AI, OCR, OR RULE-BASED OUTPUTS WILL BE ACCURATE OR COMPLETE; (C) APPEALS WILL SUCCEED OR DEADLINES WILL BE COMPLETE; (D) POTENTIAL SAVINGS ESTIMATES WILL BE REALIZED; (E) PLAN LIMITS OR USAGE METERING WILL ALWAYS MATCH YOUR EXPECTATIONS; OR (F) THIRD-PARTY SERVICES WILL REMAIN AVAILABLE.</p>
+<p class="caps">WITHOUT LIMITING THE FOREGOING, WE DO NOT WARRANT THAT: (A) THE APP WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE; (B) AI, OCR, OR RULE-BASED OUTPUTS WILL BE ACCURATE OR COMPLETE; (C) APPEALS WILL SUCCEED OR DEADLINES WILL BE COMPLETE; (D) POTENTIAL SAVINGS OR PRICE-COMPARE RANGES WILL BE REALIZED OR REFLECT LIVE MARKET PRICES; (E) PLAN LIMITS OR USAGE METERING WILL ALWAYS MATCH YOUR EXPECTATIONS; OR (F) THIRD-PARTY SERVICES WILL REMAIN AVAILABLE.</p>
 
 <h2>16. Limitation of Liability</h2>
 <p class="caps">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE DEVELOPER BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, REVENUE, DATA, GOODWILL, HEALTH-RELATED OUTCOMES, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATED TO YOUR USE OF OR INABILITY TO USE THE APP, CLOUD AI, SUBSCRIPTIONS, CONSUMABLE PURCHASES, OR ANY OUTPUT, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
@@ -214,11 +212,11 @@
 <h2>18. Termination</h2>
 <p>This Agreement remains in effect while you use the App. You may stop using the App at any time and delete it from your device. Cancel subscriptions through Apple to avoid future charges. We may suspend or terminate access if you violate this Agreement or to protect the service, users, or third parties. Upon termination, the license in Section 2 ends. Sections intended to survive (including disclaimers, liability limits, indemnity, and governing law) survive termination.</p>
 
-<h2>19. Changes to This Agreement</h2>
-<p>We may modify this Agreement by posting an updated version with a new “Last updated” date at the same URL. Material changes may be communicated in-app or by other reasonable means. Continued use after the effective date constitutes acceptance. If you do not agree, stop using the App, cancel subscriptions through Apple, and delete the App.</p>
-
-<h2>20. Export &amp; U.S. Government Users</h2>
+<h2>19. Export &amp; U.S. Government Users</h2>
 <p>You represent that you are not located in a country subject to U.S. embargo and are not on any U.S. government restricted-party list. The App is “Commercial Item” software as defined in FAR 2.101, licensed to U.S. Government end users only with the rights granted herein.</p>
+
+<h2>20. Changes to This Agreement</h2>
+<p>We may modify this Agreement by posting an updated version with a new “Last updated” date at the same URL. Material changes may be communicated in-app or by other reasonable means. Continued use after the effective date constitutes acceptance. If you do not agree, stop using the App, cancel subscriptions through Apple, and delete the App.</p>
 
 <h2>21. Governing Law &amp; Disputes</h2>
 <p>This Agreement is governed by the laws of the <strong>State of California, United States</strong>, without regard to conflict-of-law principles, except that mandatory consumer protection laws in your country of residence may apply where they cannot be waived. Exclusive jurisdiction for disputes (where permitted) shall be in state or federal courts located in California, and you consent to personal jurisdiction there.</p>
@@ -226,7 +224,7 @@
 
 <h2>22. Miscellaneous</h2>
 <ul>
-  <li><strong>Entire agreement:</strong> This Agreement, the Privacy Policy, and (for App Store users) Apple’s Standard EULA constitute the entire agreement regarding the App.</li>
+  <li><strong>Entire agreement:</strong> This Agreement, the <a href="privacy-policy.html">Privacy Policy</a>, and (for App Store users) Apple’s Standard EULA constitute the entire agreement regarding the App.</li>
   <li><strong>Severability:</strong> If any provision is unenforceable, the remainder stays in effect.</li>
   <li><strong>No waiver:</strong> Failure to enforce a provision is not a waiver.</li>
   <li><strong>Assignment:</strong> You may not assign this Agreement; we may assign it in connection with a merger or sale of assets.</li>
